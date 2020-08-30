@@ -22,7 +22,7 @@ function App() {
   }
 
   const dateBuilder = (d) => {
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "OCt", "Nov", "Dec"];
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     let day = days[d.getDay()];
@@ -53,15 +53,15 @@ function App() {
         <div>
           <div className="location-box">
             <div className="location">{weather.name}, {weather.sys.country}</div>
-              <div className="date">{dateBuilder(new Date())}</div>
-            </div>
-            <div className="weather-box">
-              <div className="temp">
-        {Math.round(weather.main.temp)}°C
-              </div>
-        <div className="weather">{weather.weather[0].main}</div>
-            </div>
+            <div className="date">{dateBuilder(new Date())}</div>
           </div>
+          <div className="weather-box">
+            <div className="temp">
+             {Math.round(weather.main.temp)}°C
+            </div>
+            <div className="weather">{weather.weather[0].main}</div>
+          </div>
+        </div>
         ) : ('')}
 
       </main>
